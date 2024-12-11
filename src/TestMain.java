@@ -16,6 +16,4 @@ public class TestMain {
             fileWrite.writeToFile("output.txt", wf.writePath(countryMap.getStartCity(), countryMap.getEndCity()));
         }
     }
-
-
 }
