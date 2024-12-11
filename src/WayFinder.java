@@ -105,7 +105,32 @@ public class WayFinder {
                 System.out.println("\nTotal Time: " + distances[end] + " min");
             }
         }
+    }
 
+    private String path = "";
+
+    public String writePath(String startName, String endName) {
+
+        int start = countryMap.cityIndexFind(startName);
+        int end = countryMap.cityIndexFind(endName);
+
+        if (start == end) {
+            path += countryMap.cities[start].getName();
+
+        } else if (previous[end] == -1) {
+            path = "No path found";
+        }
+
+        else {
+            writePath(countryMap.cityFind(start), countryMap.cityFind(previous[end]));
+            path += " -> " + countryMap.cities[end].getName();
+
+            int disLength = distances.length;
+            if(end == disLength-1){
+                path += "\nTotal Time: " + distances[end] + " min";
+            }
+        }
+        return path;
     }
 }
 
