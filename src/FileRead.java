@@ -69,13 +69,13 @@ public class FileRead {
                 System.out.println("Error: Missing start city.");
                 return null;
             }
-            String startCity = sc.next();
+            countryMap.setStartCity(sc.next());
 
             if (!sc.hasNext()) {
                 System.out.println("Error: Missing end city.");
                 return null;
             }
-            String endCity = sc.next();
+            countryMap.setEndCity(sc.next());
 
             System.out.println("File read is successful!");
 

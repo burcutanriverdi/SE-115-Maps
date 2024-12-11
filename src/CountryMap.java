@@ -5,6 +5,9 @@ public class CountryMap {
     private int citySize;
     private int routeSize;
 
+    private String startCity;
+    private String endCity;
+
     public CountryMap(int citySize, int routeSize) {
         this.cities = new City[citySize];
         this.routes = new Route[routeSize];
@@ -53,4 +56,19 @@ public class CountryMap {
         return cities[index].getName();
     }
 
+    public String getStartCity() {
+        return startCity;
+    }
+
+    public void setStartCity(String startCity) {
+        this.startCity = startCity;
+    }
+
+    public String getEndCity() {
+        return endCity;
+    }
+
+    public void setEndCity(String endCity) {
+        this.endCity = endCity;
+    }
 }
