@@ -1,7 +1,7 @@
 public class CountryMap {
 
-    City[] cities;
-    Route[] routes;
+    public City[] cities;
+    public Route[] routes;
     private int citySize;
     private int routeSize;
 
