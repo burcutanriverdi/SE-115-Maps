@@ -49,4 +49,8 @@ public class CountryMap {
         return -1;
     }
 
+    public String cityFind(int index){
+        return cities[index].getName();
+    }
+
 }
