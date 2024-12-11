@@ -4,6 +4,7 @@ public class CountryMap {
     Route[] routes;
     private int citySize;
     private int routeSize;
+
     public CountryMap(int citySize, int routeSize) {
         this.cities = new City[citySize];
         this.routes = new Route[routeSize];
@@ -35,6 +36,17 @@ public class CountryMap {
             }
         }
         return null;
+    }
+
+    public int cityIndexFind(String cityName){
+        int i = 0;
+        for(City city : cities ){
+            if(city.getName().equals(cityName)){
+                return i;
+            }
+            i++;
+        }
+        return -1;
     }
 
 }
