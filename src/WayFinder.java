@@ -70,9 +70,8 @@ public class WayFinder {
         if (distances[endCity] == Integer.MAX_VALUE) {
             System.out.println("No path found from " + startName + " to " + endName);
         } else {
-            // Reconstruct path
+
             printPath(startCity, endCity);
-            System.out.println("Total Time: " + distances[endCity] + " min");
         }
     }
 
@@ -93,11 +92,18 @@ public class WayFinder {
     public void printPath(int start, int end) {
         if (start == end) {
             System.out.print(countryMap.cities[start].getName());
+
         } else if (previous[end] == -1) {
             System.out.println("No path found");
         } else {
             printPath(start, previous[end]);
-            System.out.print( " -> " + countryMap.cities[end].getName() + " ");
+            System.out.print( " -> " + countryMap.cities[end].getName() );
+
+            // to print the lat line as total time
+            int disLength = distances.length;
+            if(end == disLength-1){
+                System.out.println("\nTotal Time: " + distances[end] + " min");
+            }
         }
 
     }
