@@ -9,7 +9,7 @@ public class WayFinder {
         this.countryMap = countryMap;
     }
 
-    // Method to find the fastest route iwmplementing Dijkstra algorithm
+    // Method to find the fastest route implementing Dijkstra algorithm
     public void findFastestRoute(String startName, String endName) {
 
         int startCity = countryMap.cityIndexFind(startName);
