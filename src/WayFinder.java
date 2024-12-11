@@ -99,7 +99,7 @@ public class WayFinder {
             printPath(start, previous[end]);
             System.out.print( " -> " + countryMap.cities[end].getName() );
 
-            // to print the lat line as total time
+            // to print the last line as total time
             int disLength = distances.length;
             if(end == disLength-1){
                 System.out.println("\nTotal Time: " + distances[end] + " min");
