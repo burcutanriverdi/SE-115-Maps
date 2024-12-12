@@ -4,7 +4,7 @@ public class TestMain {
     public static void main(String[] args) {
         // Check if a file name is provided as a command-line argument
         if (args.length < 1) {
-            System.out.println("Usage: java TestMain <file_name>");
+            System.out.println("Error: File name is not provided in the terminal.");
             return;
         }
 
