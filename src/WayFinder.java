@@ -70,8 +70,8 @@ public class WayFinder {
         if (distances[endCity] == Integer.MAX_VALUE) {
             System.out.println("No path found from " + startName + " to " + endName);
         } else {
-
-            printPath(startCity, endCity);
+            //printPath(startCity, endCity);
+            return;
         }
     }
 
