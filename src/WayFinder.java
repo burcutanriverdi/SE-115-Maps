@@ -115,7 +115,7 @@ public class WayFinder {
         int end = countryMap.cityIndexFind(endName);
 
         if (start == end) {
-            path += countryMap.cities[start].getName();
+            path += "Fastest Way: " + countryMap.cities[start].getName();
 
         } else if (previous[end] == -1) {
             path = "No path found";
