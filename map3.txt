@@ -1,0 +1,15 @@
+10
+a b c d e f g h k m 
+11
+a b 6
+a c 10
+a d 2
+d f 5
+f h 30
+h k 20
+e g 10
+c d 20
+b f 10
+e g 5
+k m 4
+a m
