@@ -25,8 +25,7 @@ public class WayFinder {
         visited = new boolean[size];
         previous = new int[size];
 
-        int min = Integer.MAX_VALUE;
-        int minIndex = -1;
+        
         for (int i = 0; i < size; i++) {
             distances[i] = Integer.MAX_VALUE;
             visited[i] = false;
