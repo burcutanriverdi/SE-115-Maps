@@ -91,7 +91,7 @@ public class WayFinder {
 
     public void printPath(int start, int end) {
         if (start == end) {
-            System.out.print(countryMap.cities[start].getName());
+            System.out.print("Fastest Way: " + countryMap.cities[start].getName());
 
         } else if (previous[end] == -1) {
             System.out.println("No path found");
