@@ -44,18 +44,19 @@ public class FileRead {
 
             // File route control
             for (int i = 0; i < routeSize; i++) {
+                int line = 4 + i;
                 if (!sc.hasNext()) {
-                    System.out.println("Error Line: Not enough route definitions.");
+                    System.out.println("Error: In line " + line + " Not enough route definitions.");
                     return null;
                 }
                 String from = sc.next();
                 if (!sc.hasNext()) {
-                    System.out.println("Error Line: Missing 'to' city in route definition.");
+                    System.out.println("Error: In line " + line + " Missing 'to' city in route definition.");
                     return null;
                 }
                 String to = sc.next();
                 if (!sc.hasNextInt()) {
-                    System.out.println("Error Line: Missing or invalid distance in route definition.");
+                    System.out.println("Error: In line " + line + " Missing or invalid distance in route definition.");
                     return null;
                 }
                 int dist = sc.nextInt();
@@ -66,13 +67,15 @@ public class FileRead {
 
             // for path Start and end cities error control
             if (!sc.hasNext()) {
-                System.out.println("Error: Missing start city.");
+                int line = 4 + routeSize;
+                System.out.println("Error: In line" + line + " Missing start city.");
                 return null;
             }
             countryMap.setStartCity(sc.next());
 
             if (!sc.hasNext()) {
-                System.out.println("Error: Missing end city.");
+                int line = 4 + routeSize;
+                System.out.println("Error: In line"+ line  +" Missing end city.");
                 return null;
             }
             countryMap.setEndCity(sc.next());
@@ -86,6 +89,8 @@ public class FileRead {
             return null;
         } finally {
             if (sc != null) {
+                if(sc.hasNext())
+                    System.out.println("Error: File is not empty there are more lines that is not written.");
                 sc.close();
             }
         }
