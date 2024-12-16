@@ -12,7 +12,8 @@ public class FileRead {
 
             //Error control for city size
             if (!sc.hasNextInt()) {
-                System.out.println("Error: First line does not contain number of cities.");
+
+                System.out.println("Error: In line " + 1 + " does not contain number of cities.");
                 return null;
             }
             int citySize = sc.nextInt();
@@ -21,7 +22,8 @@ public class FileRead {
             String[] cityNames = new String[citySize];
             for (int i = 0; i < citySize; i++) {
                 if (!sc.hasNext()) {
-                    System.out.println("Error: Not enough city labels provided.");
+                    System.out.println("Error: In line "+ 2 + "Not enough city labels provided.");
+                    //System.out.println("Error: Not enough city labels provided.");
                     return null;
                 }
                 cityNames[i] = sc.next();
@@ -33,7 +35,7 @@ public class FileRead {
 
             // Control for route size
             if (!sc.hasNextInt()) {
-                System.out.println("Error: No route count provided.");
+                System.out.println("Error: In line 3 No route count provided.");
                 return null;
             }
             int routeSize = sc.nextInt();
