@@ -94,7 +94,7 @@ public class FileRead {
         } finally {
             if (sc != null) {
                 if(sc.hasNext())
-                    System.out.println("Error: File is not empty there are more lines that is not written.");
+                    System.out.println("Error: File has more data than expected. Extra data will be ignored.");
                 sc.close();
             }
         }
