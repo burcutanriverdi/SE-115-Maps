@@ -25,6 +25,10 @@ public class FileRead {
                     return null;
                 }
                 cityNames[i] = sc.next();
+                if (!cityNames[i].matches("[a-zA-Z]+")){
+                    System.out.println("Error: In line "+ 2 + " City names must contain only letters.");
+                    return null;
+                }
             }
 
             // Control for route size
