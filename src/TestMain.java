@@ -23,8 +23,10 @@ public class TestMain {
             WayFinder wf = new WayFinder(countryMap);
             wf.findFastestRoute(countryMap.getStartCity(), countryMap.getEndCity());
 
+            String fastestPath = wf.writePath(countryMap.getStartCity(), countryMap.getEndCity());
+
             FileWrite fileWrite = new FileWrite();
-            fileWrite.writeToFile("output.txt", wf.writePath(countryMap.getStartCity(), countryMap.getEndCity()));
+            fileWrite.writeToFile("output.txt", fastestPath);
         } else {
             System.out.println("Error: Unable to read the country map from the file.");
         }
